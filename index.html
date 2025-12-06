@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Books | Curated Stories for the Modern Soul</title>
+    <meta name="description" content="Discover a curated collection of books that inspire, educate, and transport you. Lumina Books offers a premium reading experience.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="logo">Lumina.</a>
+                <div class="nav-links">
+                    <a href="#featured">Featured</a>
+                    <a href="#catalog">Catalog</a>
+                    <a href="#about">About</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="icon-btn search-btn" aria-label="Search">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title">Stories that <br> <span class="highlight">Ignite</span> the Mind.</h1>
+                <p class="hero-subtitle">Explore our hand-picked selection of timeless classics and modern masterpieces.</p>
+                <a href="#catalog" class="btn btn-primary">Start Reading</a>
+            </div>
+            <div class="hero-visual">
+                <!-- 3D Book element or abstract visual will go here -->
+                <div class="floating-book">
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Featured Section -->
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Trending Now</h2>
+                    <a href="#catalog" class="view-all">View All</a>
+                </div>
+                <div class="featured-grid" id="featured-grid">
+                    <!-- Featured items injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="catalog" class="catalog-section">
+            <div class="container">
+                <h2 class="section-title">Curated Collection</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fiction">Fiction</button>
+                    <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                <div class="book-grid" id="book-grid">
+                    <!-- Books injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <span class="logo">Lumina.</span>
+                    <p>Curating the world's best stories.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Shop</h4>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Bestsellers</a>
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>&copy; 2025 Lumina Books. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Cart Drawer -->
+        <div class="cart-overlay"></div>
+        <aside class="cart-drawer">
+            <div class="cart-header">
+                <h3>Your Bag</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items -->
+                <div class="empty-cart-msg">Your bag is empty.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block">Checkout</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
